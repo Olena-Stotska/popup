@@ -1,0 +1,28 @@
+{
+  "name": "popup",
+  "version": "1.0.0",
+  "description": "Simple popup with vanila JS",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.9.7"
+  },
+  "scripts": {
+    "start": "parcel --out-dir docs index.html",
+    "prebuild": "rm -rf docs/*",
+    "build": "parcel build --out-dir docs --public-url ./ index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olena-Stotska/popup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olena-Stotska/popup/issues"
+  },
+  "homepage": "https://github.com/Olena-Stotska/popup#readme"
+}
