@@ -181,6 +181,11 @@ document.addEventListener('click', function (event) {
     showPopup(target);
   } else if (target.matches('[data-dismiss="popup"]')) {
     hidePopup(target);
+  } else if (target.matches('[data-action="uninstall"]')) {
+    hidePopup(target);
+    setTimeout(function () {
+      return alert('Done!');
+    }, 300);
   }
 });
 
@@ -189,7 +194,7 @@ function showPopup(target) {
   popup.classList.add('popup__block');
 }
 
-function hidePopup(target) {
+function hidePopup(target, alert) {
   var popup = target.closest('.popup__mask');
   popup.classList.remove('popup__block');
 }
