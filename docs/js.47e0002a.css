@@ -68,6 +68,9 @@
   text-align: center; }
   .popup__body__btn-close {
     position: absolute;
+    background: url("icon-close.64238ee7.svg") no-repeat;
+    width: 25px;
+    height: 25px;
     left: 19px;
     top: 19px;
     background-color: transparent;
