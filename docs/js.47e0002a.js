@@ -173,6 +173,19 @@ module.hot.accept(reloadCSS);
 'use strict';
 
 require('../css/style.scss');
+
+document.addEventListener('click', function (event) {
+  var target = event.target;
+
+  if (target.matches('[data-toggle="popup"]')) {
+    showPopup(target);
+  }
+});
+
+function showPopup(target) {
+  var popup = document.getElementById(target.dataset.target);
+  popup.classList.add('popup__block');
+}
 },{"../css/style.scss":"css/style.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -202,7 +215,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '38207' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '32943' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

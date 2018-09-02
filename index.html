@@ -8,21 +8,21 @@
 </head>
 <body>
   <div class="container">
-    <button class="btn">Uninstall</button>
+    <button class="btn" data-toggle="popup" data-target="popupModal">Uninstall</button>
   </div>
 
-  <div class="popup__mask">
+  <div id="popupModal" class="popup__mask">
     <div class="popup__wrapper">
       <div class="popup__container">
         <div class="popup__body" @click="$emit('start')">
-          <button class="popup__body__btn-close">
+          <button class="popup__body__btn-close" data-dismiss="popup">
             <img src="img/icon-close.svg" alt="Close popup">
           </button>
           <img class="popup__body__img" src="img/icon-warning.svg" alt="Warning image">
           <p class="popup__body__text">Are you sure you want to uninstall the Shazam app</p>
           <div class="popup__body__buttons">
-            <button class="btn">Close</button>
-            <button class="btn btn-uninstall">Uninstall</button>
+            <button class="btn" data-dismiss="popup">Close</button>
+            <button class="btn btn-uninstall" data-action="uninstall">Uninstall</button>
           </div>
         </div>
       </div>
