@@ -5,9 +5,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" href="/bage.ab1203e6.png">
-</head>
+<link rel="stylesheet" href="/js.47e0002a.css"></head>
 <body>
-  <h1>Hello World!</h1>
+  <div class="container">
+    <button class="btn">Uninstall</button>
+  </div>
+
+  <div class="popup__mask">
+    <div class="popup__wrapper">
+      <div class="popup__container">
+        <div class="popup__body" @click="$emit('start')">
+          <button class="popup__body__btn-close">
+            <img src="/icon-close.64238ee7.svg" alt="Close popup">
+          </button>
+          <img class="popup__body__img" src="/icon-warning.5f93b69f.svg" alt="Warning image">
+          <p class="popup__body__text">Are you sure you want to uninstall the Shazam app</p>
+          <div class="popup__body__buttons">
+            <button class="btn">Close</button>
+            <button class="btn btn-uninstall">Uninstall</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="/js.47e0002a.js"></script>
 </body>

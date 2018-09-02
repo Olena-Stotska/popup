@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.btn {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #8b93a3;
+  border: 2px solid #d7deea;
+  background-color: transparent;
+  border-radius: 6px;
+  outline: none;
+  width: 210px;
+  height: 43px;
+  cursor: pointer; }
+  .btn:active {
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2); }
+
+.btn-uninstall {
+  color: #fff;
+  border: none;
+  margin-left: 25px;
+  background-color: #ff3b30;
+  box-shadow: inset 0px -2px 1px rgba(110, 4, 4, 0.5); }
+
+.popup__mask {
+  position: absolute;
+  z-index: 9998;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity .3s ease; }
+
+.popup__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9998; }
+
+.popup__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease; }
+
+.popup__body {
+  position: relative;
+  max-width: 581px;
+  max-height: 391px;
+  height: 391px;
+  background: #fff;
+  border-radius: 6px;
+  color: #d7deea;
+  padding: 19px;
+  cursor: pointer;
+  text-align: center; }
+  .popup__body__btn-close {
+    position: absolute;
+    left: 19px;
+    top: 19px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+  .popup__body__img {
+    width: 103px;
+    height: 95px;
+    margin-top: 21px; }
+  .popup__body__text {
+    font-size: 1.9rem;
+    margin: 30px 50px 50px 50px;
+    color: #4a4f59; }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1920px;
+  height: 100%; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
