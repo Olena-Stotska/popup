@@ -10,7 +10,7 @@ document.addEventListener('click', (event) => {
   }
 
   if (target.matches('[data-action="uninstall"]')) {
-    setTimeout(() => alert('Done!'), 300)
+    setTimeout(() => alert('Done!'), 500)
   }
 })
 
@@ -19,7 +19,11 @@ function showPopup(target) {
   popup.classList.add('popup__block')
 }
 
-function hidePopup(target, alert) {
+function hidePopup(target) {
   const popup = target.closest('.popup__mask')
-  popup.classList.remove('popup__block')
+  popup.classList.add('popup__hide')
+  setTimeout(() => {
+    popup.classList.remove('popup__block')
+    popup.classList.remove('popup__hide')
+  }, 500)
 }

@@ -179,13 +179,14 @@ document.addEventListener('click', function (event) {
 
   if (target.matches('[data-toggle="popup"]')) {
     showPopup(target);
-  } else if (target.matches('[data-dismiss="popup"]')) {
+  } else if (target.matches('[data-dismiss="popup"]') || target.classList.contains('popup__container')) {
     hidePopup(target);
-  } else if (target.matches('[data-action="uninstall"]')) {
-    hidePopup(target);
+  }
+
+  if (target.matches('[data-action="uninstall"]')) {
     setTimeout(function () {
       return alert('Done!');
-    }, 300);
+    }, 500);
   }
 });
 
@@ -194,9 +195,13 @@ function showPopup(target) {
   popup.classList.add('popup__block');
 }
 
-function hidePopup(target, alert) {
+function hidePopup(target) {
   var popup = target.closest('.popup__mask');
-  popup.classList.remove('popup__block');
+  popup.classList.add('popup__hide');
+  setTimeout(function () {
+    popup.classList.remove('popup__block');
+    popup.classList.remove('popup__hide');
+  }, 500);
 }
 },{"../css/style.scss":"css/style.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

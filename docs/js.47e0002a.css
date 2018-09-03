@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@keyframes popup {
+  0% {
+    transform: scale(0.8); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .btn {
   font-size: 1.3rem;
   font-weight: bold;
@@ -20,6 +34,15 @@
   background-color: #ff3b30;
   box-shadow: inset 0px -2px 1px rgba(110, 4, 4, 0.5); }
 
+.btn-close {
+  position: absolute;
+  background: url("icon-close.64238ee7.svg") no-repeat transparent;
+  width: 25px;
+  height: 25px;
+  left: 19px;
+  top: 19px;
+  border: none; }
+
 .popup__mask {
   display: none;
   position: absolute;
@@ -31,10 +54,13 @@
   width: 100%;
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity .3s ease; }
+  animation: popup 1s ease; }
 
 .popup__block {
   display: block; }
+
+.popup__hide {
+  animation: hide 0.5s ease; }
 
 .popup__wrapper {
   display: flex;
@@ -52,8 +78,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: all .3s ease; }
+  align-items: center; }
 
 .popup__body {
   position: relative;
@@ -66,17 +91,6 @@
   padding: 19px;
   cursor: pointer;
   text-align: center; }
-  .popup__body__btn-close {
-    position: absolute;
-    background: url("icon-close.64238ee7.svg") no-repeat;
-    width: 25px;
-    height: 25px;
-    left: 19px;
-    top: 19px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none; }
   .popup__body__img {
     width: 103px;
     height: 95px;
@@ -93,11 +107,12 @@ html,
 body {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
-  max-width: 1920px;
-  height: 100%; }
+  height: 100%;
+  margin: 0;
+  padding: 0; }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
+  height: 100%; }

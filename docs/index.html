@@ -15,12 +15,12 @@
     <div class="popup__wrapper">
       <div class="popup__container">
         <div class="popup__body" @click="$emit('start')">
-          <button class="popup__body__btn-close" data-dismiss="popup"></button>
+          <button class="btn btn-close" data-dismiss="popup"></button>
           <img class="popup__body__img" src="/icon-warning.5f93b69f.svg" alt="Warning image">
           <p class="popup__body__text">Are you sure you want to uninstall the Shazam app</p>
           <div class="popup__body__buttons">
             <button class="btn" data-dismiss="popup">Close</button>
-            <button class="btn btn-uninstall" data-action="uninstall">Uninstall</button>
+            <button class="btn btn-uninstall" data-action="uninstall" data-dismiss="popup">Uninstall</button>
           </div>
         </div>
       </div>
