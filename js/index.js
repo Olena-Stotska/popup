@@ -10,7 +10,7 @@ document.addEventListener('click', (event) => {
   }
 
   if (target.matches('[data-action="uninstall"]')) {
-    setTimeout(() => alert('Done!'), 500)
+    setTimeout(() => alert('Done!'), 550)
   }
 })
 

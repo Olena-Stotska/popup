@@ -11,7 +11,7 @@
     width: 100%;
     min-height: 100%;
     background-color: rgba(0, 0, 0, .5);
-    animation: popup 1s ease;
+    animation: fadeUp 1s ease;
   }
 
   &__block {
@@ -19,7 +19,7 @@
   }
 
   &__hide {
-    animation: hide 0.5s ease;
+    animation: fadeOut 0.5s ease;
   }
 
   &__wrapper {
