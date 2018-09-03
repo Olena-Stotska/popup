@@ -5,10 +5,11 @@ document.addEventListener('click', (event) => {
 
   if (target.matches('[data-toggle="popup"]')) {
     showPopup(target)
-  } else if (target.matches('[data-dismiss="popup"]')) {
+  } else if (target.matches('[data-dismiss="popup"]') || target.classList.contains('popup__container')) {
     hidePopup(target)
-  } else if (target.matches('[data-action="uninstall"]')) {
-    hidePopup(target)
+  }
+
+  if (target.matches('[data-action="uninstall"]')) {
     setTimeout(() => alert('Done!'), 300)
   }
 })
